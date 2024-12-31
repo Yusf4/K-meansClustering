@@ -20,6 +20,13 @@ centroids=kmeans.cluster_centers_
 print("Cluster labels:",labels)
 print("Centroids:",centroids)
 
+plt.scatter(data[:,0],data[:,1],c=labels,cmap='viridis',label='data Points')
+plt.scatter(centroids[:,0],centroids[:1],s=300,c='red',marker='X',label='Centroids')
+plt.title('K-Means Clustering')
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt.legend()
+plt.show()
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print("Script executed successfully!")
